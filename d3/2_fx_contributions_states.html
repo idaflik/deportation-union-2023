@@ -8,6 +8,15 @@
 
   <body>
     <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <h3>Frontex’s financial contributions to member states</h3>
+    <p>
+      Member states can claim back from Frontex the costs they incur for
+      participating in deportation operations coordinated by the agency. This
+      graphic shows how much each participating member state has received each
+      year. As the biggest user of Frontex-coordinated deportation operations,
+      Germany remains by far the biggest recipient of these funds.
+    </p>
+
     <div class="menu">
       <p>
         Frontex contributions to
@@ -55,7 +64,7 @@
         var keys = csv.columns.slice(2);
 
         var MSNAMEs = [...new Set(csv.map((d) => d.MSNAME))];
-        
+
         var options = d3
           .select("#MSNAME")
           .selectAll("option")

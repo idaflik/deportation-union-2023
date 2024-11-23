@@ -8,6 +8,21 @@
 
   <body>
     <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+
+    <h3>
+      Number of operations and people deported, by year and operation type
+    </h3>
+    <p>
+      This chart shows the number of people deported and the number of
+      deportation operations, by year and operation type. For joint return
+      operations (JROs), Frontex coordinates the actions of multiple member
+      states who wish to deport people to one or more destinations. National
+      return operations involve just one EU member state, but Frontex
+      nevertheless plays a coordinating and financing role. Collecting return
+      operations involve a plane and staff from the destination state travelling
+      to the EU to pick up deportees.
+    </p>
+
     <p>
       Select the series to display:
       <select id="KEY"></select>
@@ -23,10 +38,21 @@
       </p>
     </div>
     <div class="caption">
+      <p>Notes:</p>
       <p>
-        Note: When the same operation ID is used for multiple dates, they are
-        counted as different operations. Only operations taking place the same
-        day and sharing an ID are counted as the same operation.
+        When the same operation ID is used for multiple dates, they are counted
+        as different operations. Only operations taking place the same day and
+        sharing an ID are counted as the same operation.
+      </p>
+      <p>
+        The data contains the abbreviations VRD, VDO
+        and "Humanitarian VR". Frontex did not respond to questions on what
+        exactly these stand for. "Humanitarian VR" is presumably "humanitarian
+        voluntary return," while the VR in VRD may also stand for voluntary
+        return. However, the precise meaning cannot be confirmed without a
+        statement from the agency. For some operations, no operation type was
+        provided. If the return operation ID (RO-ID) starts with "VRD", "VRD" was
+        used as operation type.
       </p>
     </div>
 

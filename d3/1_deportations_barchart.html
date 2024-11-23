@@ -8,6 +8,16 @@
 
   <body>
     <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <h3>Deportations by year, EU member states and destination states</h3>
+    <p>
+      This graphic makes it possible to examine in more detail the member states
+      involved in Frontex-coordinated deportations to particular destinations.
+      For example: Germany is the only state to have deported anyone to
+      Azerbaijan via a Frontex-coordinated operation since 2019; it is also the
+      only EU member state to have deported anyone to Bosnia via a Frontex
+      coordinated operation since 2018.
+    </p>
+
     <div class="menu">
       <p>
         Persons returned to
@@ -107,7 +117,7 @@
             "#8b8fab",
             "#98abc5",
           ])
-          .domain(keys.slice(0,7))
+          .domain(keys.slice(0, 7))
           .unknown("#bac5d6");
 
         update(d3.select("#DEST").property("value"), 0);
