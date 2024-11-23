@@ -164,19 +164,16 @@
                 .style("display", "inline-block")
                 .html(
                   "<div class = 'tooltip-content'>" +
-                    "From " +
-                    "<strong>" +
-                    d.source.name +
-                    "</strong>" +
-                    "<br>" +
-                    "to " +
-                    "<strong>" +
-                    d.target.name +
-                    "</strong>: <br>" +
                     "<strong>" +
                     formatNumber(d.value) +
                     "</strong> " +
-                    "persons deported (between <br> 2006 and 2023)" +
+                    "persons deported from " +
+                    "<strong>" +
+                    d.source.name +
+                    "</strong> to " +
+                    "<strong>" +
+                    d.target.name +
+                    "</strong> (between 2006 and 2023)" +
                     "</div>"
                 );
             })
