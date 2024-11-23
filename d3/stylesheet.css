@@ -7,6 +7,17 @@ body {
   background-color: #f2f2f3;
 }
 
+body > h3,
+body > p,
+body > .menu,
+.caption > p {
+  margin: 1em 20px;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
 .plot {
   fill: #fff;
 }
