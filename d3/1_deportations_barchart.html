@@ -108,17 +108,10 @@
         var z = d3
           .scaleOrdinal()
           .range([
-            "#ff8c00",
-            "#d5791f",
-            "#aa653d",
-            "#80525c",
-            "#715678",
-            "#7e7292",
-            "#8b8fab",
-            "#98abc5",
+         '#faa84b', '#e39b5b', '#cb8f68', '#b28274', '#98767f', '#7c6b8a', '#5a6093',
           ])
           .domain(keys.slice(0, 7))
-          .unknown("#bac5d6");
+          .unknown("#5a6093");
 
         update(d3.select("#DEST").property("value"), 0);
 

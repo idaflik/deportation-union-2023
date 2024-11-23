@@ -107,18 +107,10 @@
         var z = d3
           .scaleOrdinal()
           .range([
-            "#715678",
-            "#7a6989",
-            "#827c9a",
-            "#8b8fab",
-            "#94a2bc",
-            "#a1abba",
-            "#b3aaa5",
-            "#c6aa8f",
-            "#d8a97a",
+'#364497', '#625696', '#856a95', '#a37f93', '#c19590', '#deab8d', '#fac288',
           ])
-          .domain(keys.slice(0, 8))
-          .unknown("#eaa964");
+          .domain(keys.slice(0, 7))
+          .unknown("#fac288");
 
         update(d3.select("#MSNAME").property("value"), 0);
 

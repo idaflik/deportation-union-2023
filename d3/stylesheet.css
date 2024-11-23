@@ -18,20 +18,27 @@ h3 {
   font-size: 1.8rem;
 }
 
-.plot {
-  fill: #fff;
-}
 .line {
   fill: none;
   stroke-linejoin: round;
   stroke-linecap: round;
 }
+
+rect {
+  stroke: #f2f2f3;
+  stroke-width: 0.1px;
+}
+
+rect:hover {
+  stroke: #333333;
+  stroke-linecap: round;
+  stroke-width: 1px;
+}
+
 .axis path {
   fill: none;
 }
-
 .tooltip {
-  /* font-family: sans-serif; */
   margin-right: 5px;
   font-size: 0.85rem;
   position: absolute;
@@ -39,10 +46,6 @@ h3 {
   background-color: white;
   opacity: 0.95;
   width: 150px;
-  /* min-width: 80px;
-  max-width: 300px;
-  min-height: auto; */
-  /* background: none repeat scroll 0 0 #ffffff; */
   border: none;
   text-align: left;
   border-radius: 2px;
