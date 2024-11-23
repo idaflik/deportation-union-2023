@@ -212,22 +212,23 @@
                 .style("display", "inline-block")
                 .html(
                   "<div class = 'tooltip-title'>" +
-                    "Frontex contributions" +
-                    "<br>" +
-                    "in " +
-                    d.data.YEAR +
-                    " in total:" +
+                    "Frontex contributions <br>to " +
+                    "<strong>" +
+                    subgroupName +
+                    ":</strong> " +
                     "<br>" +
                     "<strong>" +
-                    d3.format("$,.0f")(d.data.total) +
+                      d3.format("$,.0f")(delta) +
                     "</strong>" +
                     "</div>" +
                     "<div class = 'tooltip-content'>" +
-                    d3.format("$,.0f")(delta) +
+                    "total " +
+                    "(" +
+                    d.data.YEAR +
+                    "):" +
                     "<br>" +
-                    "to " +
                     "<strong>" +
-                    subgroupName +
+                    d3.format("$,.0f")(d.data.total) +
                     "</strong>" +
                     "</div>"
                 );

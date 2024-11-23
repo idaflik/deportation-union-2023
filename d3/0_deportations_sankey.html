@@ -71,7 +71,21 @@
         color = d3.scale
           .ordinal()
           .range([
-           '#faa84b', '#f1a355', '#e99e5e', '#e09a67', '#d7956f', '#cd9176', '#c48c7e', '#ba8885', '#af838c', '#a47f93', '#997b9a', '#8d77a1', '#7f73a8', '#706fae', '#5e6bb5',
+            "#faa84b",
+            "#f1a355",
+            "#e99e5e",
+            "#e09a67",
+            "#d7956f",
+            "#cd9176",
+            "#c48c7e",
+            "#ba8885",
+            "#af838c",
+            "#a47f93",
+            "#997b9a",
+            "#8d77a1",
+            "#7f73a8",
+            "#706fae",
+            "#5e6bb5",
           ]);
 
       var sankey = d3
@@ -149,10 +163,8 @@
                 .style("top", d3.event.pageY + "px")
                 .style("display", "inline-block")
                 .html(
-                  "<div class = 'tooltip-title'>" +
-                    "Persons deported " +
-                    "<br>" +
-                    "from " +
+                  "<div class = 'tooltip-content'>" +
+                    "From " +
                     "<strong>" +
                     d.source.name +
                     "</strong>" +
@@ -160,14 +172,11 @@
                     "to " +
                     "<strong>" +
                     d.target.name +
-                    "</strong>" +
-                    "</div>" +
-                    "<div class = 'tooltip-content'>" +
+                    "</strong>: <br>" +
                     "<strong>" +
                     formatNumber(d.value) +
-                    "</strong>" +
-                    "<br>" +
-                    "(between 2006 and 2023)" +
+                    "</strong> " +
+                    "persons deported (between <br> 2006 and 2023)" +
                     "</div>"
                 );
             })
@@ -214,7 +223,7 @@
           // add in the title for the nodes
           node
             .append("text")
-            .attr("class", "sankey_label")
+            .attr("class", "text_label")
             .attr("x", -6)
             .attr("y", function (d) {
               return d.dy / 2;

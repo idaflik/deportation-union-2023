@@ -37,13 +37,11 @@
       </p>
     </div>
     <div class="caption">
-      <p>Notes:</p>
-      <p>
+      <p>Notes:<br>
         When the same operation ID is used for multiple dates, they are counted
         as different operations. Only operations taking place the same day and
         sharing an ID are counted as the same operation.
-      </p>
-      <p>
+        <br>
         The data contains the abbreviations VRD, VDO
         and "Humanitarian VR". Frontex did not respond to questions on what
         exactly these stand for. "Humanitarian VR" is presumably "humanitarian
@@ -63,6 +61,7 @@
         currency: ["€", ""],
       });
 
+      // is not working because of scale being set to desktop
       var isMobile = window.innerWidth < 768;
 
       var menu = d3.select("#KEY");
@@ -85,7 +84,7 @@
         var svg = d3.select("#chart"),
           margin = { top: 20, left: 70, bottom: 10, right: 30 },
           width = window.innerWidth - margin.left - margin.right,
-          height = window.innerHeight - margin.top - margin.bottom - 400;
+          height = isMobile ? (window.innerHeight - margin.top - margin.bottom - 500) : (window.innerHeight - margin.top - margin.bottom - 380);
         // -100 height to leave space for the selector within iframe
 
         svg
@@ -142,8 +141,6 @@
             d.total = d3.sum(keys, (k) => +d[k]);
             return d;
           });
-
-          console.log(data);
 
           y.domain([d3.max(data, (d) => d.total), 0]).nice();
           svg
@@ -224,18 +221,19 @@
                 .style("display", "inline-block")
                 .html(
                   "<div class = 'tooltip-title'>" +
-                    menu.property("value") +
-                    "<br>" +
-                    "in " +
-                    +d.data.YEAR +
+                    "<strong>" +
+                      subgroupName +
+                    "</strong>" +
                     "</div>" +
                     "<div class = 'tooltip-content'>" +
-                    subgroupName +
-                    ":" +
-                    "<br>" +
                     "<strong>" +
                     delta +
                     "</strong>" +
+                    " ("+
+                    menu.property("value") +
+                    " "+
+                    +d.data.YEAR +
+                    ")"+
                     "</div>"
                 );
             })

@@ -206,22 +206,24 @@
                 .style("top", d3.event.pageY + "px")
                 .style("display", "inline-block")
                 .html(
-                  "<div class = 'tooltip-title'>" +
-                    "Deportations to " +
-                    "<br>" +
-                    menu.property("value") +
-                    "<br>" +
-                    "in " +
-                    d.data.YEAR +
-                    "</div>" +
+                  
                     "<div class = 'tooltip-content'>" +
-                    delta +
-                    " persons" +
-                    "<br>" +
-                    "from " +
+                      "<strong>" +
+                      delta +
+                    "</strong>" +
+                    " persons deported from " +
                     "<strong>" +
                     subgroupName +
                     "</strong>" +
+                    " to " +
+                    "<br>" +
+                    "<strong>" +
+                    menu.property("value") +
+                    "</strong>" +
+                    "<br>" +
+                    "in " +
+                    d.data.YEAR +
+                    "<strong>" +
                     "</div>"
                 );
             })

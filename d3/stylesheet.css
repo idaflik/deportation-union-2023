@@ -41,15 +41,16 @@ rect:hover {
 .tooltip {
   margin-right: 5px;
   font-size: 0.85rem;
+  font-family: monospace;
   position: absolute;
   display: none;
   background-color: white;
+  border: none;
   opacity: 0.95;
   width: 150px;
-  border: none;
   text-align: left;
-  border-radius: 2px;
-  box-shadow: 1px 1px 5px #7f7f7f;
+  border-radius: 5px;
+  /* box-shadow: 1px 1px 5px #7f7f7f; */
 }
 
 .tooltip > div {
@@ -57,24 +58,35 @@ rect:hover {
 }
 
 .tooltip-title {
-  background-color: #eee;
+  border-radius: 5px 5px 0px 0px;
+  background-color: white;
+  border-bottom: #e6e6e6 1px solid;
   padding-bottom: 7px !important;
-  color: #444;
 }
 
 .tooltip-content {
   padding-top: 7px !important;
 }
 
-.tick > text,
-text.sankey_label {
+.tick > text {
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+text.text_label {
   font-size: 0.85rem;
 }
 
-svg > text,
-.grey_labels > g > text {
+svg > text {
   font-size: 0.8rem;
   fill: #666;
+  font-family: monospace;
+}
+
+.grey_labels > g > text {
+  font-weight: 600;
+  fill: #666;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .tick > line {

@@ -55,8 +55,6 @@
           return d;
         });
 
-        console.log(data);
-
         var svg = d3.select("#chart"),
           margin = { top: 20, left: 60, bottom: 70, right: 30 },
           width = window.innerWidth - margin.left - margin.right,
@@ -115,11 +113,12 @@
           .selectAll(".x-axis")
           .call(d3.axisBottom(x))
           .selectAll("text") // Select all x-axis tick labels
+          .attr("class", "text_label")
           .style("text-anchor", "end")
           .attr("dx", "-.8em")
           .attr("dy", "-.3em")
           .attr("dy", "-.3em")
-          .style("font-size", isMobile ? "0.7rem" : "0.85rem")
+          .style("font-size", isMobile ? "0.65rem" : "0.8rem")
           .attr("transform", "rotate(-90)");
 
         svg
